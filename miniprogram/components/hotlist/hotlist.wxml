@@ -1,0 +1,17 @@
+<!--components/hotlist/hotlist.wxml-->
+<!-- <text>components/hotlist/hotlist.wxml</text> -->
+<!-- 这是发现页面的hot的list组件 -->
+<view class="{{bool?'xhz':'dhz'}}" data-id="{{item.postid}}" bindtap="btn"  bindtouchmove="anxiabtn" bindtouchend="tanqibtn">
+			<image class="{{myclass?'tp active':'tp active2'}}" src="{{item.image+'?imageView=1&type=webp&thumbnail=246x0'}}"  />
+			<view class="{{myclass?'wenzi wzact':'wenzi act2'}}">
+				<view class="t1">
+					<text>{{item.cates[0].catename}}</text>
+					<text> / </text>
+					<text>{{tool.parseTime(item.duration)}}</text>
+					<text wx:if="{{item.tags}}"> #{{item.tags}}</text>
+				</view>
+				<view class="t2">
+					<text>{{item.title}}</text>
+				</view>
+			</view>
+		</view>

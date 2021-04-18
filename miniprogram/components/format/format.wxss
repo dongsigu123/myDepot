@@ -1,0 +1,54 @@
+/* components/format/format.wxss */
+.comment{
+	width: 100%;
+}
+.comment .title{
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+	color: #000;
+}
+.comment .text{
+	width: 92%;
+	margin: 0 auto;
+}
+.comment image{
+	width: 100%;
+	vertical-align: bottom;
+}
+.comment video{
+	width: 100%;
+}
+.comment .hz{
+	font-size: 15px;
+	color: #282828;
+	text-align: left;
+	line-height: 25px;
+	margin-top: 20px;
+	letter-spacing: 1px;
+}
+.ti .hz:nth-child(1){
+	text-align: center;
+	font-size: 15px;
+	color: #adadad;
+	line-height: 40px;
+	margin-top: 7px;
+}
+.ti2 .hz:nth-child(1){
+	text-align: center;
+	font-size: 15px;
+	color: #000;
+	line-height: 40px;
+	margin-top: 7px;
+}
+.ti2 .hz:nth-child(2){
+	text-align: center;
+	font-size: 15px;
+	color: #adadad;
+	line-height: 40px;
+	margin-top: 7px;
+}
+.b{
+	font-weight: bold;
+	font-size: 16px;
+}

@@ -1,0 +1,77 @@
+/* miniprogram/pages/setup/setup.wxss */
+.box{
+	width: 100%;
+	height: 100vh;
+	overflow-y: auto;
+	background-color: #f4f4f4;
+}
+.box .top{
+	width: 90%;
+	padding: 0 5%;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	background-color: white;
+	overflow: hidden;
+	line-height: 70px;
+	margin-top: 15px;
+}
+.box .top .left{
+	float: left;
+}
+.top .left image{
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+.top .left .t1{
+	font-size: 16px;
+	margin-left: 15px;
+	color: #4c4c4c;
+}
+.top .t2{
+	display: inline-block;
+	padding: 2px 20px;
+	background-color: #f4562c;
+	color: white;
+	float: right;
+	font-size: 12px;
+	line-height: 25px;
+	margin-top: 20.5px;
+	border-radius: 5px;
+}
+.center,.bottom{
+	width: 100%;
+	background-color: white;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	margin-top: 20px;
+}
+.center .hz,.bottom .hz{
+	width: 90%;
+	margin-left: 5%;
+	padding-right: 5%;
+	border-bottom: 1px solid #e8e8e8;
+	line-height: 50px;
+	overflow: hidden;
+}
+.center .hz:nth-last-of-type(1),.bottom .hz:nth-last-of-type(1){
+	border: none;
+}
+.center .hz .t1,.bottom .hz .t1{
+	float: left;
+	color: #4c4c4c;
+	font-size: 16px;
+}
+.center .hz .t2,.bottom .hz .t2{
+	font-size: 16px;
+	color: #bbbb;
+}
+.center .hz view,.bottom .hz view{
+	float: right;
+}
+.center .hz .jiantou,.bottom .hz .jiantou{
+	font-size: 18px;
+	color: #bbb;
+	margin-left: 12px;
+}

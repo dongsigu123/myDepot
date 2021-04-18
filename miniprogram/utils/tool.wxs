@@ -1,0 +1,90 @@
+var padStart = function (n) {//补零
+  return (n > 9 ? n : "0" + n).toString()
+}
+
+var parseTime = function (d) {//时间转换=> 02'54"
+  if(d > 10000){
+      var n = d / 1000
+      return padStart(Math.floor(n / 60)) + "'" + padStart(n % 60) + '"'
+  }else{
+    if(d == 0){
+      return '00"';
+    }
+    return padStart(Math.floor(d / 60)) + "'" + padStart(d % 60) + '"';
+  }
+}
+var parseTime2 = function (d) {//时间转换=> 02:54
+  if(d > 10000){
+      var n = d / 1000
+      return padStart(Math.floor(n / 60)) + ":" + padStart(n % 60);
+  }else{
+    if(d == 0){
+      return '00"';
+    }
+    return padStart(Math.floor(d / 60)) + ":" + padStart(d % 60);
+  }
+}
+
+var commenttime = function(t){//日期转换
+  var date = getDate(t * 1000); //时间戳为10位需*1000
+  var Y = date.getFullYear();
+  var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+  var D = padStart(date.getDate());
+  var h = padStart(date.getHours()) + ':';
+  var m = padStart(date.getMinutes());
+  var mydata = getDate();
+  if(Y != mydata.getFullYear()){
+    return Y + "年" + M + "月" + D + "日";
+  }else{
+    if(D == mydata.getDate()){
+      return h + m;
+    }else if(D == mydata.getDate()-1){
+      return "昨天" + h + m;
+    }
+    return M + "月" + D + "日";
+  }
+}
+var publishtime = function(t){//阅读全文的时间=> 2021.01.21
+  var date = getDate(t * 1000); //时间戳为10位需*1000
+  var Y = date.getFullYear();
+  var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+  var D = padStart(date.getDate());
+  return Y + "." + M + "." + D;
+}
+var Reg = function(r){//关键字
+  var rstr = r;
+  var num = rstr.split("[a").length-1;//判断类型长度
+  var num2 = rstr.split("[b").length-1;
+  if(num!=0){
+    var i = 0;
+    while(i < num){
+      var left = rstr.indexOf("[");
+      var right = rstr.indexOf("]");
+      var str = rstr.substring(left,right+1);
+      var num = str.lastIndexOf("=");
+      var str2 = str.substring(num+2,str.length-2);
+      rstr = rstr.replace(str,'<span style="color:#42a5f5">' + str2 + '</span>');
+      i++;
+    }
+  }
+  if(num2!=0){
+    var i = 0;
+    while(i < num2){
+      var left = rstr.indexOf("[");
+      var right = rstr.indexOf("]");
+      var str = rstr.substring(left,right+1);
+      var num = str.lastIndexOf("=");
+      var str2 = str.substring(num+2,str.length-2);
+      rstr = rstr.replace(str,'<span class="b">' + str2 + '</span>');
+      i++;
+    }
+  }
+  return rstr;
+}
+module.exports = {
+  parseTime: parseTime,
+  parseTime2: parseTime2,
+  commenttime:commenttime,
+  publishtime:publishtime,
+  Reg:Reg
+};

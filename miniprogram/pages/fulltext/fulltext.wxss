@@ -1,0 +1,30 @@
+/* pages/fulltext/fulltext.wxss */
+.title{
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+.title text{
+	width: 80%;
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+.foot{
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.foot .t1{
+	font-size: 15px;
+	color: #282828;
+	display: block;
+}
+.foot .t2{
+	font-size: 12px;
+	color: #999;
+	display: block;
+	line-height: 20px;
+}

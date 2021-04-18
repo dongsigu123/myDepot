@@ -1,0 +1,125 @@
+/* miniprogram/pages/user/user.wxss */
+.box{
+	width: 100%;
+	height: 100vh;
+	background-color: #f4f4f4;
+	overflow: hidden;
+}
+.box .top{
+	width: 100%;
+	margin-top: 15px;
+	background-color: white;
+	border-bottom: 1px solid #e8e8e8;
+	border-top: 1px solid #e8e8e8;
+}
+.top view .t1{
+	float: left;
+	color: #4c4c4c;
+	font-size: 16px;
+}
+.top view .right{
+	float: right;
+	display: flex;
+	align-items: center;
+}
+.top view .jiantou{
+	font-size: 18px;
+	color: #bbb;
+	margin-left: 12px;
+}
+.top view .t2{
+	font-size: 16px;
+	color: #bbbb;
+}
+.top .hz1{
+	line-height: 80px;
+	display: flex;
+	justify-content: space-between;
+}
+.hz1,.hz2,.hz3{
+	padding-right: 5%;
+	overflow: hidden;
+}
+.top .hz1,.top .hz2{
+	width: 94%;
+	margin-left: 5%;
+	border-bottom: 1px solid #e8e8e8;
+}
+.top .hz2{
+	line-height: 50px;
+}
+.top .hz3{
+	width: 94%;
+	padding-left: 5%;
+	line-height: 50px;
+}
+.top .hz3 .right{
+	margin-right: 1%;
+}
+.top .hz1 image{
+	width: 60px;
+	height: 60px;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+.center{
+	width: 100%;
+	background-color: white;
+	border-bottom: 1px solid #e8e8e8;
+	margin-top: 50px;
+	border-top: 1px solid #e8e8e8;
+}
+.center .hz{
+	width: 94%;
+	padding-left: 5%;
+	border-bottom: 1px solid #e8e8e8;
+	overflow: hidden;
+	line-height: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+.hz .left{
+	float: left;
+	display: flex;
+	align-items: center;
+}
+.hz .right{
+	float: right;
+}
+.hz .zuotb{
+	float: left;
+	font-size: 18px;
+}
+.hz text{
+	font-size: 16px;
+	color: #4c4c4c;
+	margin-left: 15px;
+}
+.hz .jiantou{
+	font-size: 18px;
+	color: #bbb;
+}
+.center .hz:nth-last-of-type(1){
+	border: none;
+}
+.bottom{
+	line-height: 50px;
+	margin-top: 20px;
+	border-top: 1px solid #e8e8e8;
+	border-bottom: 1px solid #e8e8e8;
+	width: 94%;
+	overflow: hidden;
+	padding-left: 5%;
+	background-color: white;
+}
+.bottom text{
+	font-size: 16px;
+	color: #4c4c4c;
+}
+.bottom view{
+	float: right;
+}
+.bottom .jiantou{
+	font-size: 18px;
+	color: #bbb;
+}

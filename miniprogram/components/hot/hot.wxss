@@ -1,0 +1,16 @@
+/* components/hot/hot.wxss */
+/* components/cart/cart.wxss */
+.content{
+	width: 100%;
+}
+.title{
+	line-height: 70px;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.cont{
+	width: 100%;
+	overflow: hidden;
+}

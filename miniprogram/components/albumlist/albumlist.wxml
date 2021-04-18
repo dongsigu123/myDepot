@@ -1,0 +1,11 @@
+<!--components/albumlist/albumlist.wxml-->
+<!-- <text>components/albumlist/albumlist.wxml</text> -->
+<!-- 这是频道的专题组件 -->
+<view class="hz" data-id="{{item.postid}}" bindtap="btn" bindtouchmove="anxiabtn" bindtouchend="tanqibtn">
+	<image class="{{myclass?'tp active':'tp active2'}}" src="{{item.image}}"></image>
+	<view class="{{myclass?'wenzi wzact':'wenzi act2'}}">
+		<view class="t1">专题</view>
+		<view class="t2">{{item.title}}</view>
+		<view class="t3">{{item.app_fu_title}}</view>
+	</view>
+</view>

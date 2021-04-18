@@ -1,0 +1,19 @@
+<!--components/find/find.wxml-->
+<!-- 这是发现页面 -->
+<view wx:if="{{index}}" class="box">
+	<swiper indicator-dots="{{true}}" class="swiper" autoplay="{{true}}" indicator-color="rgba(255, 255, 255, .3)" indicator-active-color="rgba(255,255,255,1)">
+		<swiper-item wx:for="{{index.banner.list}}" wx:key="bannerid">
+			<van-image width="750rpx" fit="cover" height="420rpx" src="{{item.image}}" />
+		</swiper-item>
+	</swiper>
+	<indexlist data="{{index.today}}" />
+	<hot data="{{index.hot}}" />
+	<album data="{{index.album}}" />
+	<indexlist data="{{index.posts}}" />
+	<view class="gengduo">
+		<indexlist wx:for="{{gddata}}" data="{{item}}" wx:key="index" />
+		<view class="title">
+			<text bindtap="gdbtn" class="gd">加载更多</text>
+		</view>
+	</view>
+</view>

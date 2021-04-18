@@ -1,0 +1,50 @@
+<!--components/comment/comment.wxml-->
+<!-- <text>components/comment/comment.wxml</text> -->
+<wxs src="/utils/tool.wxs" module="tools"></wxs>
+<div class="content">
+	<view class="title">{{comment.total}}条评论</view>
+	<view class="cont" wx:for="{{comment.list}}" wx:key="commentid">
+		<view class="hz">
+			<view class="left">
+				<image class="tp" src="{{item.userinfo.avatar}}" />
+			</view>
+			<view class="right">
+				<view class="top">
+					<view class="lef">
+						<text class="t1">{{item.userinfo.username}}</text>
+						<text class="t2">{{tools.commenttime(item.addtime)}}</text>
+					</view>
+					<view class="rig">
+						<van-icon custom-class="icon" name="good-job-o" />
+						<text>{{item.count_approve}}</text>
+					</view>
+				</view>
+				<view class="bottom">
+					<text>{{item.content}}</text>
+				</view>
+				<div class="comment" wx:for="{{item.subcomment}}" wx:for-item="i" wx:key="commentid">
+					<view class="left">
+						<image class="tp" src="{{i.userinfo.avatar}}"></image>
+					</view>
+					<view class="right">
+						<view class="top">
+							<view class="lef">
+								<text class="t1">{{i.userinfo.username}}</text>
+								<text class="t2">{{tools.commenttime(i.addtime)}}</text>
+							</view>
+							<view class="rig">
+								<van-icon custom-class="icon" name="good-job-o" />
+								<text>{{i.count_approve}}</text>
+							</view>
+						</view>
+						<view class="bottom">
+							<text>回复 {{i.reply_userinfo.username}}: {{i.content}}</text>
+						</view>
+					</view>
+				</div>
+			</view>
+		</view>
+	</view>
+	
+	<view class="end">-End-</view>
+</div>

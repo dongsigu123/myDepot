@@ -1,0 +1,11 @@
+<!--components/playlistlist/playlistlist.wxml-->
+<!-- <text>components/playlistlist/playlistlist.wxml</text> -->
+<!-- 这是播放页面的list的list -->
+<wxs src="/utils/tool.wxs" module="tools"></wxs>
+<view class="hz" bindtap="btn" bindtouchmove="anxiabtn" bindtouchend="tanqibtn" data-id="{{item.postid}}">
+	<image class="{{myclass?'tp active':'tp active2'}}" src="{{item.image}}" alt="" />
+	<view class="{{myclass?'wenzi wzact':'wenzi act2'}}">
+		<view>{{tools.parseTime(item.duration)}}</view>
+		<view class="t2">{{item.title}}</view>
+	</view>
+</view>

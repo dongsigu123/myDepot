@@ -1,0 +1,14 @@
+<!--pages/fulltext/fulltext.wxml-->
+<!-- <text>pages/fulltext/fulltext.wxml</text> -->
+<!-- 这是发现页面的list的播放页面的阅读全文 -->
+<wxs src="/utils/tool.wxs" module="tools"></wxs>
+<view wx:if="{{data}}" class="box">
+	<view class="title">
+		<text>{{data.title}}</text>
+	</view>
+	<format data="{{data}}" title="{{true}}" />
+	<view class="foot">
+		<text class="t1">by {{data.editor.username}}</text>
+		<text class="t2">{{tools.publishtime(data.publish_time)}}</text>
+	</view>
+</view>

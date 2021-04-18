@@ -1,0 +1,20 @@
+<!--components/format/format.wxml-->
+<!-- <text>components/format/format.wxml</text> -->
+<!-- 这是阅读全文，专题的内容组件 -->
+<wxs src="/utils/tool.wxs" module="tools"></wxs>
+<view class="{{title?'ti comment':'ti2 comment'}}">
+		<view class="hz" wx:for="{{data.format_content}}" wx:key="index">
+			<view wx:if="{{item.type=='normal'}}" class="text">
+				<rich-text nodes='{{tools.Reg(item.content)}}'></rich-text>
+			</view>
+			<view wx:elif="{{item.type=='video'}}">
+				<video wx:if="{{data.content_video.length!=1}}" src="{{data.content_video[item.attr.index].progressive[0].url}}" />
+			</view>
+			<view wx:elif="{{item.type=='image'}}">
+				<image src="{{item.attr.src}}" style="height:{{(item.attr.height*750)/item.attr.width}}rpx" />
+			</view>
+			<view wx:else class="title text">
+				<rich-text nodes='{{tools.Reg(item.content)}}'></rich-text>
+			</view>
+		</view>
+</view>

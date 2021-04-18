@@ -1,0 +1,10 @@
+<!--components/hot/hot.wxml-->
+<!-- <text>components/hot/hot.wxml</text> -->
+<!-- 这是发现页面的热门组件 -->
+<wxs src="/utils/tool.wxs" module="tool"></wxs>
+<view class="content">
+	<view class="title">{{data.selection_title}}</view>
+	<view class="cont">
+		<hotlist wx:for="{{data.list}}" wx:key="postid" item="{{item}}" bool="{{index>0?true:false}}"/>
+	</view>
+</view>

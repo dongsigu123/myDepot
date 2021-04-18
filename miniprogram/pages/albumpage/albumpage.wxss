@@ -1,0 +1,87 @@
+/* pages/albumpage/albumpage.wxss */
+.box .title{
+	text-align: center;
+	margin-top: 15px;
+}
+.box .title text{
+	width: 80%;
+	font-weight: bold;
+	font-size: 18px;
+}
+.foot{
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #f1f1f1;
+}
+.foot .t1{
+	font-size: 14px;
+	color: #282828;
+	display: block;
+}
+.foot .t2{
+	font-size: 12px;
+	color: #999;
+	display: block;
+	line-height: 20px;
+}
+.bottom{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 2;
+	height: 50px;
+	padding-left: 5%;
+	background-color: white;
+	overflow: hidden;
+	border-top: 1px solid rgb(248, 245, 245);
+	display: flex;
+	align-items: center;
+}
+.bottom .left{
+	width: 60%;
+	float: left;
+	position: relative;
+}
+.bottom .left .bi{
+	position: absolute;
+	left: 9%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	color: #999;
+	font-weight: bold;
+}
+.bottom .inp{
+	border-radius: 15px;
+	width: 90%;
+	position: absolute;
+	border: 1px solid #cac9c9;
+	height: 25px;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-left: 5%;
+	font-size: 13px;
+}
+.bottom .right{
+	width: 35%;
+	display: flex;
+	float: left;
+	justify-content: space-around;
+	color: #999;
+}
+.bottom .hz{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 7px;
+}
+.bottom .hz text{
+	font-size: 12px;
+}
+.right .xin,.right .fengxiang{
+	font-weight: bold;
+}

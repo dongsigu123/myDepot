@@ -1,0 +1,11 @@
+/* components/album/album.wxss */
+.title{
+	line-height: 70px;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+.swiper{
+	height: 420rpx;
+}

@@ -1,0 +1,8 @@
+<!--components/channel/channel.wxml-->
+<!-- <text>components/channel/channel.wxml</text> -->
+<!-- 这是频道页面 -->
+<view wx:if="{{channel}}" class="box">
+	<view class="content">
+		<channellist wx:for="{{channel}}" wx:key="index" item="{{item}}" />
+	</view>
+</view>

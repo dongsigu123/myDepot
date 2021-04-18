@@ -1,0 +1,62 @@
+<!--miniprogram/pages/user/user.wxml-->
+<!-- <text>miniprogram/pages/user/user.wxml</text> -->
+<!-- 这是用户个人信息页面 -->
+<view class="box">
+	<view class="top">
+		<view class="hz1">
+			<text class="t1">头像</text>
+			<view class="right">
+				<image src="{{data.avatarUrl}}" alt="" />
+				<van-icon size="16" custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+		<view class="hz2">
+			<text class="t1">昵称</text>
+			<view class="right">
+				<text class="t2">{{data.nickName}}</text>
+				<van-icon size="16" custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+		<view class="hz3">
+			<text class="t1">国家/地区</text>
+			<view class="right">
+				<text class="t2">{{data.country}} {{data.province}} {{data.city}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="center">
+		<view class="hz">
+			<view class="left">
+				<van-icon custom-class="zuotb" color="#2cc000" name="wechat" />
+				<text>已绑定</text>
+			</view>
+			<view class="right">
+				<van-icon size="16" custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+		<view class="hz">
+			<view class="left">
+				<van-icon custom-class="zuotb" color="#d4292b" name="smile" />
+				<text>未绑定</text>
+			</view>
+			<view class="right">
+				<van-icon size="16" custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+		<view class="hz">
+			<view class="left">
+				<van-icon custom-class="zuotb" color="#2688b6" name="friends" />
+				<text>未绑定</text>
+			</view>
+			<view class="right">
+				<van-icon size="16" custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+	</view>
+	<view class="bottom">
+		<text>修改密码</text>
+		<view>
+			<van-icon size="16" custom-class="jiantou" name="arrow" />
+		</view>
+	</view>
+</view>

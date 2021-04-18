@@ -1,0 +1,7 @@
+<!--components/indexlist/indexlist.wxml-->
+<!-- <text>components/indexlist/indexlist.wxml</text> -->
+<!-- 这是发现页面的list组件，如今日 -->
+<view class="content">
+	<view class="title">{{data.selection_title}}</view>
+	<cart wx:for="{{data.list}}" wx:key="postid" item="{{item}}"/>
+</view>

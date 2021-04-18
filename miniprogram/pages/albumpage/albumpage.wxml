@@ -1,0 +1,32 @@
+<!--pages/albumpage/albumpage.wxml-->
+<!-- 这是发现的专题页面 -->
+<!-- <text>pages/albumpage/albumpage.wxml</text> -->
+<wxs src="/utils/tool.wxs" module="tools"></wxs>
+<view wx:if="{{data}}" class="box">
+	<view class="title">
+		<text>{{data.title}}</text>
+	</view>
+	<format data="{{data}}" title="{{false}}" />
+	<view class="foot">
+		<text class="t1">by {{data.editor.username}}</text>
+		<text class="t2">{{tools.publishtime(data.publish_time)}}</text>
+	</view>
+	<comment comment="{{data.comment}}" />
+	<view class="bottom">
+		<view class="left">
+			<van-icon custom-class="bi" name="edit" />
+			<input class="inp" type="text" />
+		</view>
+		<view class="right">
+			<view class="hz" bindtap="Collectionbtn">
+				<van-icon wx:if="{{!isshow}}" custom-class="xin" name="like-o" />
+				<van-icon wx:if="{{isshow}}" color="#fd6a67" custom-class="xin" name="like" />
+				<text>{{data.count_like}}</text>
+			</view>
+			<view class="hz">
+				<van-icon custom-class="fengxiang" name="share-o" />
+				<text>{{data.count_share}}</text>
+			</view>
+		</view>
+	</view>
+</view>

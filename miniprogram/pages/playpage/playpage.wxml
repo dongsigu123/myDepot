@@ -1,0 +1,59 @@
+<!--pages/playpage/playpage.wxml-->
+<!-- <text>pages/playpage/playpage.wxml</text> -->
+<!-- 这是发现页面的list的播放页面 -->
+<wxs src="/utils/tool.wxs" module="tools"></wxs>
+<view wx:if="{{data}}" class="box">
+	<video class="video" src="{{data.content_video[0].source_link}}" />
+	<view class="title">{{data.title}}</view>
+	<view class="xtitle">
+		<text>{{data.cate[0]}}</text>
+		<text class="xtit1"> / </text>
+		<text>{{tools.parseTime(data.duration)}}</text>
+	</view>
+	<view class="intro">
+		<text>{{data.intro}}</text>
+	</view>
+	<view class="fulltext">
+		<view  bindtap="btn" class="ftext">
+			<text>阅读全文 </text>
+			<van-icon custom-class="yjiantou"  name="down" />
+		</view>
+	</view>
+	<view class="author" wx:if="{{data.author}}">
+		<view class="left">
+			<image src="{{data.author.profile.avatar}}"></image>
+		</view>
+		<view class="right">
+			<view class="lef">
+				<text class="t1">{{data.author.profile.username}}</text>
+				<text class="t2">片中职务: {{data.author.roles}}</text>
+			</view>
+			<view class="rig">
+				<van-icon custom-class="yjt" name="arrow" />
+			</view>
+		</view>
+	</view>
+	<playlist wx:for="{{data.relate_video}}" data="{{item}}" wx:key="id"/>
+	<comment comment="{{data.comment}}" />
+	<view class="foot">
+		<view class="left">
+			<van-icon custom-class="bi" name="edit" />
+			<input class="inp" type="text" />
+		</view>
+		<view class="right">
+			<view class="hz" bindtap="Collectionbtn">
+				<van-icon wx:if="{{!isshow}}" custom-class="xin" name="like-o" />
+				<van-icon wx:if="{{isshow}}" color="#fd6a67" custom-class="xin" name="like" />
+				<text>{{data.count_like}}</text>
+			</view>
+			<view class="hz">
+				<van-icon custom-class="fengxiang" name="share-o" />
+				<text>{{data.count_share}}</text>
+			</view>
+			<view class="hz">
+				<van-icon  custom-class="xiazai" name="back-top" />
+				<text>缓存</text>
+			</view>
+		</view>
+	</view>
+</view>

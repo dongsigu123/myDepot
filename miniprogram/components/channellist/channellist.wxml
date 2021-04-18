@@ -1,0 +1,9 @@
+<!--components/channellist/channellist.wxml-->
+<!-- <text>components/channellist/channellist.wxml</text> -->
+<!-- 这是频道的组件 -->
+<view class="hz" data-id="{{item.cateid?item.cateid:null}}" data-tab="{{item.tab?item.tab:null}}" data-title="{{item.catename}}" bindtap="btn" bindtouchmove="anxiabtn" bindtouchend="tanqibtn">
+	<view class="xhz" wx:if="{{item!=''}}">
+		<image class="{{myclass?'tp active':'tp active2'}}" src="{{item.icon+'?imageView=1&type=webp&thumbnail=246x0'}}" />
+		<text class="{{myclass?'wzact':'act2'}}">#{{item.catename}}#</text>
+	</view>
+</view>

@@ -1,0 +1,36 @@
+{
+	"pages": [
+		"pages/home/home",
+		"pages/index/index",
+		"pages/logs/logs",
+		"pages/playpage/playpage",
+		"pages/albumpage/albumpage",
+		"pages/fulltext/fulltext",
+		"pages/chanpage/chanpage",
+		"pages/search/search",
+		"pages/Collection/Collection",
+		"pages/history/history",
+		"pages/user/user",
+		"pages/setup/setup"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#000",
+		"navigationBarTitleText": "Depot",
+		"navigationBarTextStyle": "white"
+	},
+	"sitemapLocation": "sitemap.json",
+	"usingComponents": {
+		"van-tab": "@vant/weapp/tab/index",
+		"van-tabs": "@vant/weapp/tabs/index",
+		"van-button": "@vant/weapp/button/index",
+		"van-picker": "@vant/weapp/picker/index",
+		"van-toast": "@vant/weapp/toast/index",
+		"van-nav-bar": "@vant/weapp/nav-bar/index",
+		"van-icon": "@vant/weapp/icon/index",
+		"van-image": "@vant/weapp/image/index",
+		"van-search": "@vant/weapp/search/index",
+		"van-overlay": "@vant/weapp/overlay/index",
+		"van-rate": "@vant/weapp/rate/index"
+	}
+}

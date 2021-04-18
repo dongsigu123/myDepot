@@ -1,0 +1,33 @@
+<!--miniprogram/pages/history/history.wxml-->
+<!-- <text>miniprogram/pages/history/history.wxml</text> -->
+<!-- 播放历史页面 -->
+<view wx:if="{{isshow}}" class="box">
+	<view class="title" wx:if="{{data}}">
+		<text class="t1">近三天</text>
+		<text class="t2" bindtap="emptybtn">清空</text>
+	</view>
+	<view class="content" wx:if="{{data}}">
+		<view class="hz" data-id="{{item._id}}" bindtap="btn" wx:for="{{data}}" wx:key="_id">
+			<view class="left">
+				<image src="{{item.image}}" />
+				<text>{{tool.parseTime(item.duration)}}</text>
+			</view>
+			<view class="right">
+				<view class="top">
+					<text>{{item.title}}</text>
+				</view>
+				<view class="bottom">
+					<van-rate custom-class="pingfen" value="{{item.rating/2}}" size="{{ 10 }}" color="#ffd21e" allow-half void-color="#eee" void-icon="star" />
+					<text class="t1">{{item.rating}}分</text>
+					<van-icon custom-class="fenxiang" name="share-o" />
+					<text class="t2">{{item.count_share}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="end">-End-</view>
+	</view>
+	<view class="kong" wx:if="{{!data}}">
+		<van-icon custom-class="zhong" name="clock-o" />
+		<text>暂无任何播放记录</text>
+	</view>
+</view>

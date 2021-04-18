@@ -1,0 +1,19 @@
+<!--pages/chanpage/chanpage.wxml-->
+<!-- <text>pages/chanpage/chanpage.wxml</text> -->
+<!-- 这是频道内容详情的页面 -->
+<view wx:if="{{data}}" class="box">
+	<view class="content">
+		<view class="hz" wx:for="{{data}}" wx:key="postid">
+			<cart item="{{item}}" />
+		</view>
+		<view class="gengduo" wx:if="{{isshow}}">
+			<view class="hz" wx:for="{{gddata}}" wx:key="postid">
+				<cart item="{{item}}" />
+			</view>
+			<view class="title">
+				<text bindtap="gdbtn" class="gd">加载更多</text>
+			</view>
+		</view>
+	</view>
+</view>
+

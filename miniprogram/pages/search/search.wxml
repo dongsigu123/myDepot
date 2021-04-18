@@ -1,0 +1,35 @@
+<!--pages/search/search.wxml-->
+<!-- <text>pages/search/search.wxml</text> -->
+<!-- 这是搜索页面 -->
+<view class="box">
+	<view class="top">
+		<van-search background="#191919" value="{{ value }}" placeholder="请输入要搜索的内容" show-action bind:search="onSearch" custom-class="cus" input-class="inp" field-class="sousuo" cancel-class="quxiao" bind:cancel="onCancel" bind:clear="onClear" />
+	</view>
+	<view class="hot" wx:if="{{isshow}}">
+		<view class="title">热门搜索</view>
+		<view class="hotcont">
+			<text data-value="{{item.kw}}" bindtap="hotbtn" class="hz" wx:for="{{data.recommend_keywords}}" wx:key="id">{{item.kw}}</text>
+		</view>
+	</view>
+	<view class="history" wx:if="{{isshow}}">
+		<view class="title">
+			<text class="tit">搜索历史</text>
+			<view bindtap="qcbtn" class="qc" wx:if="{{histdata}}">
+				<text>清除</text>
+				<van-icon name="delete-o" custom-class="ljt" />
+			</view>
+		</view>
+		<view class="hiscont">
+			<view wx:if="{{!histdata}}" class="kong">还没有任何搜索记录</view>
+			<view class="hiscottext" wx:if="{{histdata}}">
+				<text data-value="{{item}}" class="hz" bindtap="hotbtn" wx:for="{{histdata}}" wx:key="index">{{item}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="content" wx:if="{{!isshow}}">
+		<view class="title">{{data.result.total}}个相关影片</view>
+		<view class="hz" wx:for="{{data.result.list}}" wx:key="postid">
+			<cart item="{{item}}" />
+		</view>
+	</view>
+</view>

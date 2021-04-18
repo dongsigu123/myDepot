@@ -1,0 +1,11 @@
+<!-- components/playlist/playlist.wxml -->
+<!-- <text>components/playlist/playlist.wxml</text> -->
+<!-- 这是发现的播放页面的list -->
+<view class="content">
+	<view class="title">{{data.name}}</view>
+	<view class="dhz">
+		<view class="cont" style="width:{{data.list.length*180}}px">
+			<playlistlist wx:for="{{data.list}}" wx:key="postid" item="{{item}}" />
+		</view>
+	</view>
+</view>

@@ -1,0 +1,11 @@
+<!--components/album/album.wxml-->
+<!-- <text>components/album/album.wxml</text> -->
+<!-- 这是发现页面的专题组件 -->
+<view class="content">
+	<view class="title">{{data.selection_title}}</view>
+	<swiper indicator-dots="{{true}}" autoplay="{{true}}" class="swiper" indicator-color="rgba(255, 255, 255, .3)" indicator-active-color="rgba(255,255,255,1)">
+		<swiper-item class="swip" wx:for="{{data.list}}" wx:key="postid">
+			<albumlist item="{{item}}" />
+		</swiper-item>
+	</swiper>
+</view>

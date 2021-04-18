@@ -1,0 +1,29 @@
+<!--miniprogram/pages/Collection/Collection.wxml-->
+<!-- <text>miniprogram/pages/Collection/Collection.wxml</text> -->
+<!-- 这是我的喜欢页面 -->
+<wxs src="/utils/tool.wxs" module="tool"></wxs>
+<view wx:if="{{isshow}}" class="box">
+	<view class="content" wx:if="{{data}}">
+		<view class="hz" data-id="{{item._id}}" data-index="{{item.duration?1:2}}" bindtap="btn" wx:for="{{data}}" wx:key="_id">
+			<view class="left">
+				<image src="{{item.image}}" />
+				<text wx:if="{{item.duration}}">{{tool.parseTime2(item.duration)}}</text>
+			</view>
+			<view class="right">
+				<view class="top">
+					<text>{{item.title}}</text>
+				</view>
+				<view class="bottom">
+					<van-rate custom-class="pingfen" wx:if="{{item.rating}}" value="{{item.rating/2}}" size="{{ 10 }}" color="#ffd21e" allow-half void-color="#eee" void-icon="star" />
+					<text wx:if="{{item.rating}}" class="t1">{{item.rating}}分</text>
+					<van-icon custom-class="fenxiang" name="share-o" />
+					<text class="t2">{{item.count_share}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="end" wx:if="{{data}}">-End-</view>
+	<view class="kong" wx:if="{{!data}}">
+		<text>你还没有喜欢的哦</text>
+	</view>
+</view>

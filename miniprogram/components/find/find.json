@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "indexlist": "/components/indexlist/indexlist",
+    "hot": "/components/hot/hot",
+    "album": "/components/album/album"
+  }
+}

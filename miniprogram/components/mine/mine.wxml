@@ -1,0 +1,50 @@
+<!--components/mine/mine.wxml-->
+<!-- <text>components/mine/mine.wxml</text> -->
+<!-- 这是我的页面 -->
+<view class="box">
+	<view class="top">
+		<image class="bjtp" src="/components/static/userbj.jpg" alt="" />
+		<view class="topcont">
+			<image bindtap="userbtn" wx:if="{{!userinfo}}" src="/components/static/user.jpg" />
+			<image bindtap="userbtn"  wx:if="{{userinfo}}" src="{{userinfo.avatarUrl}}" />
+			<text wx:if="{{userinfo}}" open-type="getUserInfo">{{userinfo.nickName}}</text>
+			<button wx:if="{{!userinfo}}" class="btn" open-type="getUserInfo" bindtap="getUserProfile">点击登录</button>
+		</view>
+	</view>
+	<div class="content">
+		<div class="conttop">
+			<view class="hz" bindtap="mylike">
+				<van-icon size="16" custom-class="icon1" name="like-o" />
+				<text>我的喜欢</text>
+				<van-icon size="16" custom-class="icon2" name="arrow" />
+			</view>
+			<view class="hz">
+				<van-icon size="16" custom-class="icon1" name="back-top" />
+				<text>离线缓存</text>
+				<van-icon size="16" custom-class="icon2" name="arrow" />
+			</view>
+			<view class="hz" bindtap="historybtn">
+				<van-icon size="16" custom-class="icon1" name="clock-o" />
+				<text>播放历史</text>
+				<van-icon size="16" custom-class="icon2" name="arrow" />
+			</view>
+			<view class="hz">
+				<van-icon size="16" custom-class="icon1" name="bullhorn-o" />
+				<text>我的消息</text>
+				<van-icon size="16" custom-class="icon2" name="arrow" />
+			</view>
+		</div>
+		<view class="contbot">
+			<view bindtap="setupbtn" class="hz">
+				<van-icon size="16" custom-class="icon1" name="setting-o" />
+				<text>设置</text>
+				<van-icon size="16" custom-class="icon2" name="arrow" />
+			</view>
+			<view class="hz">
+				<van-icon size="16" custom-class="icon1" name="edit" />
+				<text>问题反馈</text>
+				<van-icon size="16" custom-class="icon2" name="arrow" />
+			</view>
+		</view>
+	</div>
+</view>

@@ -1,0 +1,49 @@
+<!--pages/home.wxml-->
+<!-- 主页 -->
+<div class="dbox">
+	<div class="top">
+		<van-icon custom-class="rili"  color="white" name="notes-o" size="42rpx" bindtap="btn" />
+		<div class="topcont">
+			<view class="{{index==1?'active':''}}" data-index="1" bindtap="topbtn">发现</view>
+			<view class="{{index==2?'active':''}}" data-index="2" bindtap="topbtn">频道</view>
+			<view class="{{index==3?'active':''}}" data-index="3" bindtap="topbtn">我的</view>
+		</div>
+		<van-icon custom-class="sousuo" color="white" name="search" size="42rpx" bindtap="btn2"/>
+	</div>
+	<view class="content">
+		<find wx:if="{{index==1}}"/>
+		<channel wx:if="{{index==2}}" />
+		<mine wx:if="{{index==3}}" />
+	</view>
+</div>
+
+
+<view class="box" wx:if="{{show}}">
+	<view class="bjhz">
+		<image src="{{data.image_blurred}}"></image>
+	</view>
+	<view class="xboxcontent">
+		<van-icon size="28px" bindtap="btn3" custom-class="cha" name="cross" />
+		<view class="cont">
+			<view class="top">
+				<image src="{{data.image}}"></image>
+				<view class="wenzi">
+					<view class="left">
+						<text>{{data.time.day}}</text>
+					</view>
+					<view class="right">
+						<text class="t1">{{data.time.month}}</text>
+						<text class="t2">{{data.time.week}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="bottom">
+				<view class="title">{{data.title}}</view>
+				<view class="comment">{{data.content}}</view>
+				<van-icon color="#4a4a4a" custom-class="fengxiang" name="share-o" />
+			</view>
+		</view>
+	</view>
+</view>
+
+

@@ -1,0 +1,77 @@
+<!--miniprogram/pages/setup/setup.wxml-->
+<!-- <text>miniprogram/pages/setup/setup.wxml</text> -->
+<!-- 这是用户设置页面 -->
+<view class="box">
+	<view class="top" wx:if="{{data}}">
+		<view class="left">
+			<image src="{{data.avatarUrl}}" />
+			<text class="t1">{{data.nickName}}</text>
+		</view>
+		<text class="t2" bindtap="signoutbtn">退出</text>
+	</view>
+	<view class="center">
+		<view class="hz">
+			<text class="t1">清楚图片缓存</text>
+			<view>
+				<van-icon custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+		<view class="hz">
+			<text class="t1">播放设置</text>
+			<view>
+				<van-icon custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+		<view class="hz">
+			<text>离线缓存路径设置</text>
+			<view>
+				<text class="t2">手机存储</text>
+				<van-icon custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+		<view class="hz">
+			<text class="t1">给作者评分</text>
+			<view>
+				<van-icon custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+	</view>
+	<view class="bottom">
+		<view class="hz">
+			<text class="t1">分享给好友</text>
+			<view>
+				<van-icon custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+		<view class="hz">
+			<text class="t1">关注微信公众号</text>
+			<view>
+				<van-icon custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+		<view class="hz">
+			<text class="t1">加入用户QQ群</text>
+			<view>
+				<van-icon custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+		<view class="hz">
+			<text class="t1">关于我们</text>
+			<view>
+				<van-icon custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+		<view class="hz">
+			<text class="t1">免责申明</text>
+			<view>
+				<van-icon custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+		<view class="hz">
+			<text class="t1">用户协议</text>
+			<view>
+				<van-icon custom-class="jiantou" name="arrow" />
+			</view>
+		</view>
+	</view>
+</view>
